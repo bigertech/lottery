@@ -1,218 +1,255 @@
 <!DOCTYPE HTML>
 <html>
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Textillate.js</title>
+  <title>魅族魅蓝公开抽奖</title>
+  <meta name="keyword" content="魅蓝，抽奖，QQ空间，黄钻手机节，算法">
+  <meta name="description" content="魅蓝公开抽奖算法">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link href="assets/animate.css" rel="stylesheet">
   <link href="assets/style.css" rel="stylesheet">
-  <body>
-    <div class="decal"></div>
-		<div class="jumbotron">
-			<div class="container">
-  		  <h1 class="glow in tlt">魅族QQ空间活动抽奖</h1>
-  		  <p class="tlt" data-in-effect="bounceInDown">
-  		  	算法公正、公开，哈哈哈哈
-  		  </p>
-        <a href="#" class="btn fade in">中奖序列号</a>
-        <a href="#" class="btn fade in dark">抽奖源码</a>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var b = document.createElement("script");
+      b.src = "//hm.baidu.com/hm.js?897c5e90b15f7f050e35c66b6978bd2c";
+      var a = document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(b, a)
+    })();
+  </script>
+</head>
 
-      </div>
-  	</div>
-    <div class="decal"></div>
-  	<div class="container fade in">
-      <div class="grid grid-pad">
-        <section class="col-1-1">
-            <h2 class="js-test">中奖编号(共20)</h2>
-            <div class="playground grid">
-
-              <div class="col-1-1 viewport">
-                  <div class="tlt">
-                    <ul class="texts" style="display: none" id="luck-list">
-                      <li></li>
-                    </ul>
-                  </div>
-              </div>
-              <div class="col-1-1 controls" style="padding-right: 0">
-                <form class="grid grid-pad">
-                  <div class="control col-1-2">
-                    <label>In Animation</label>
-                    <select data-key="effect" data-type="in"></select>
-                    <select data-key="type" data-type="in">
-                      <option value="">sequence</option>
-                      <option value="reverse">reverse</option>
-                      <option value="sync">sync</option>
-                      <option value="shuffle">shuffle</option>
-                    </select>
-                  </div>
-                  <div class="control col-1-2">
-                    <label>Out Animation</label>
-                    <select data-key="effect" data-type="out"></select>
-                    <select data-key="type" data-type="out">
-                      <option value="">sequence</option>
-                      <option value="reverse">reverse</option>
-                      <option value="sync">sync</option>
-                      <option selected="selected" value="shuffle">shuffle</option>
-                    </select>
-                  </div>
-                </form>
-              </div>
-            </div>
-        </section>
-      </div>
-  	</div>
-    <div class="intro container">
-      <h2 class="js-test">抽奖说明</h2>
-      <div class="playground">
-
-        <h4>中奖号码计算办法</h4>
-
-        <ul>
-          <li>开奖日收盘时的上证指数 × 收盘时的深证成指 × 10000 = 12位数。（指数以证交所公布数字为准）；</li>
-          <li>将此12位数的数字倒序排列后（如首位是0，则直接抹去），参加本次活动的人数（每个抽奖号为一个人数），得到的余数加1即为本次活动的第一个获奖号码。</li>
-          <li>如果当天需要开多个奖，则用此号码分别+1223*N , N为 1，2，3，4。。。得出当天其他获奖号码。</li>
-          <li>如果抽奖号码超过了总参加人数，则将抽奖号码减去参加人数得到新的抽奖号码。</li>
-        </ul>
-
-
-        <h4>例如</h4>
-
-        <ol>
-          <li>2014-12-18日上证指数 3076.49，深证指数 10591.54。活动参与人数 65302</li>
-          <li>基数：3076.49 * 10591.54 * 10000 = 325847668946</li>
-          <li>反转的结果： 649866748523</li>
-          <li>第一个中奖号码: (649866748523 % 65302) +1 = 51500</li>
-          <li>更多中奖号码:
-
-            <ul>
-              <li>51500 + 1223 * 1 = 52723</li>
-              <li>51500 + 1223 * 2 = 53946</li>
-              <li>51500 + 1223 * 3 = 55169</li>
-              <li>。。。</li>
-            </ul>
-          </li>
-        </ol>
-
-
-        <h4>注意事项</h4>
-
-        <ul>
-          <li>此活动仅限人类参加，机器人或外星生物参加取消资格；</li>
-          <li>开奖期间请保持手机畅通，开奖后超过7天无法联系视为主动放弃</li>
-          <li>任何问题去笔戈科技微博反馈</li>
-        </ul>
-
-
-      </div>
-      <p class="support"><a href="http://www.bigertech.com" >笔戈科技</a>提供技术支持</p>
+<body>
+  <div class="decal"></div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="glow in tlt">魅族QQ空间活动抽奖</h1>
+      <p class="tlt" data-in-effect="bounceInDown">
+        算法公正、公开，哈哈哈哈
+      </p>
+      <a href="#" class="btn fade in">中奖序列号</a>
+      <a href="https://github.com/bigertech/lottery" class="btn fade in dark">抽奖源码</a>
     </div>
+  </div>
+  <div class="decal"></div>
+  <div class="container fade in">
+    <div class="grid grid-pad">
+      <section class="col-1-1">
+        <h2 class="js-test">中奖编号(共20)</h2>
+        <div class="playground grid">
 
-<script src="assets/jquery.min.js"></script>
-<script src="assets/jquery.fittext.js"></script>
-<script src="assets/jquery.lettering.js"></script>
-<script src="assets/highlight.min.js"></script>
-<script src="assets/choujiang.js"></script>
-    <script src="jquery.textillate.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-<script>
-  $(function (){
-    var log = function (msg) {
-      return function () {
-        if (console) console.log(msg);
-      }
-    };
-    var luchString = getLucker(3076.49,10591.54,65302,20);
-    $('#luck-list li').text(luchString.join(' '));
-    $('code').each(function () {
-      var $this = $(this);
-      $this.text($this.html());
-    });
+          <div class="col-1-1 viewport">
+            <div class="tlt">
+              <ul class="texts" style="display: none" id="luck-list">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-1 controls" style="padding-right: 0">
+            <form class="grid grid-pad">
+              <div class="control col-1-2">
+                <label>In Animation</label>
+                <select data-key="effect" data-type="in"></select>
+                <select data-key="type" data-type="in">
+                  <option value="">sequence</option>
+                  <option value="reverse">reverse</option>
+                  <option value="sync">sync</option>
+                  <option value="shuffle">shuffle</option>
+                </select>
+              </div>
+              <div class="control col-1-2">
+                <label>Out Animation</label>
+                <select data-key="effect" data-type="out"></select>
+                <select data-key="type" data-type="out">
+                  <option value="">sequence</option>
+                  <option value="reverse">reverse</option>
+                  <option selected="selected" value="sync">sync</option>
+                  <option value="shuffle">shuffle</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="intro container">
+    <h2 class="js-test">抽奖说明</h2>
+    <div class="playground">
 
-    var animateClasses = 'flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut';
+      <h4>中奖号码计算办法</h4>
 
-    var $form = $('.playground form')
-      , $viewport = $('.playground .viewport');
+      <ul>
+        <li>开奖日收盘时的上证指数 × 收盘时的深证成指 × 10000 = 12位数。（指数以证交所公布数字为准）；</li>
+        <li>将此12位数的数字倒序排列后（如首位是0，则直接抹去），参加本次活动的人数（每个抽奖号为一个人数），得到的余数加1即为本次活动的第一个获奖号码。</li>
+        <li>如果当天需要开多个奖，则用此号码分别 + （D * N） ,D为当天的月和日，如当天为12月23号，则D为1223，, N为 1，2，3，4。。。得出当天其他获奖号码。</li>
+        <li>如果抽奖号码超过了总参加人数，则将抽奖号码减去参加人数得到新的抽奖号码。</li>
+      </ul>
 
-    var getFormData = function () {
-      var data = { 
-        loop: true, 
-        in: { callback: log('in callback called.') },
-        out: { callback: log('out callback called.') }
+
+      <h4>例如</h4>
+
+      <ol>
+        <li>2014-12-18日上证指数 3076.49，深证指数 10591.54。活动参与人数 65302</li>
+        <li>基数：3076.49 * 10591.54 * 10000 = 325847668946</li>
+        <li>反转的结果： 649866748523</li>
+        <li>第一个中奖号码: (649866748523 % 65302) +1 = 51500</li>
+        <li>更多中奖号码:
+
+          <ul>
+            <li>51500 + 1223 * 1 = 52723</li>
+            <li>51500 + 1223 * 2 = 53946</li>
+            <li>51500 + 1223 * 3 = 55169</li>
+            <li>。。。</li>
+          </ul>
+        </li>
+      </ol>
+
+
+      <h4>注意事项</h4>
+
+      <ul>
+        <li>此活动仅限人类参加，机器人或外星生物参加取消资格；</li>
+        <li>开奖期间请保持手机畅通，开奖后超过7天无法联系视为主动放弃</li>
+        <li>任何问题去笔戈科技微博反馈</li>
+      </ul>
+
+
+    </div>
+    <p class="support"><a href="http://www.bigertech.com">笔戈科技</a>提供技术支持</p>
+  </div>
+
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/jquery.fittext.js"></script>
+  <script src="assets/jquery.lettering.js"></script>
+  <script src="assets/highlight.min.js"></script>
+  <script src="assets/choujiang.js"></script>
+  <script src="jquery.textillate.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script>
+    $(function() {
+      var log = function(msg) {
+        return function() {
+          if (console) console.log(msg);
+        }
       };
-      
-      $form.find('[data-key="effect"]').each(function () {
-        var $this = $(this)
-          , key = $this.data('key')
-          , type = $this.data('type');
-
-          data[type][key] = $this.val();
+      var luchString = getLucker(3076.49, 10591.54, 65302, 20);
+      $('#luck-list li').text(luchString.join(' '));
+      $('code').each(function() {
+        var $this = $(this);
+        $this.text($this.html());
       });
 
-      $form.find('[data-key="type"]').each(function () {
-        var $this = $(this)
-          , key = $this.data('key')
-          , type = $this.data('type')
-          , val = $this.val();
+      var animateClasses =
+        'flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut';
+
+      var $form = $('.playground form'),
+        $viewport = $('.playground .viewport');
+
+      var getFormData = function() {
+        var data = {
+          loop: true,
+          in : {
+            callback: log('in callback called.')
+          },
+          out: {
+            //delay: 50000,
+            callback: log('out callback called.')
+          }
+        };
+
+        $form.find('[data-key="effect"]').each(function() {
+          var $this = $(this),
+            key = $this.data('key'),
+            type = $this.data('type');
+
+          data[type][key] = $this.val();
+        });
+
+        $form.find('[data-key="type"]').each(function() {
+          var $this = $(this),
+            key = $this.data('key'),
+            type = $this.data('type'),
+            val = $this.val();
 
           data[type].shuffle = (val === 'shuffle');
           data[type].reverse = (val === 'reverse');
           data[type].sync = (val === 'sync');
+        });
+
+        return data;
+      };
+
+      $.each(animateClasses.split(' '), function(i, value) {
+        var type = '[data-type]',
+          option = '<option value="' + value + '">' + value + '</option>';
+
+        if (/Out/.test(value) || value === 'hinge') {
+          type = '[data-type="out"]';
+        } else if (/In/.test(value)) {
+          type = '[data-type="in"]';
+        }
+
+        if (type) {
+          $form.find('[data-key="effect"]' + type).append(option);
+        }
       });
 
-      return data;
-    };
+      $form.find('[data-key="effect"][data-type="in"]').val('fadeInLeftBig');
+      $form.find('[data-key="effect"][data-type="out"]').val('hinge');
 
-    $.each(animateClasses.split(' '), function (i, value) {
-      var type = '[data-type]'
-        , option = '<option value="' + value + '">' + value + '</option>';
+      $('.jumbotron h1')
+        .fitText(1)
+        .textillate({ in : {
+            effect: 'flipInY'
+          }
+        });
 
-      if (/Out/.test(value) || value === 'hinge') {
-        type = '[data-type="out"]';
-      } else if (/In/.test(value)) {
-        type = '[data-type="in"]';
-      } 
-
-      if (type) {
-        $form.find('[data-key="effect"]' + type).append(option);        
-      }
-    });
-
-    $form.find('[data-key="effect"][data-type="in"]').val('fadeInLeftBig');
-    $form.find('[data-key="effect"][data-type="out"]').val('hinge');
-
-    $('.jumbotron h1')
-      .fitText(1)
-      .textillate({ in: { effect: 'flipInY' }});
-    
-    $('.jumbotron p')
-      .fitText(3.2, { maxFontSize: 38 })
-      .textillate({ initialDelay: 1000, in: { delay: 3, shuffle: true } });
-    $('.js-test').textillate({ in: { effect: 'flipInY' }});
-    setTimeout(function () {
+      $('.jumbotron p')
+        .fitText(3.2, {
+          maxFontSize: 38
+        })
+        .textillate({
+          initialDelay: 1000,
+          in : {
+            delay: 3,
+            shuffle: true
+          }
+        });
+      $('.js-test').textillate({ in : {
+          effect: 'flipInY'
+        }
+      });
+      setTimeout(function() {
         $('.fade').addClass('in');
-    }, 250);
+      }, 250);
 
-    setTimeout(function () {
-      $('h1.glow').removeClass('in');
-    }, 2000);
+      setTimeout(function() {
+        $('h1.glow').removeClass('in');
+      }, 2000);
 
-    var $tlt = $viewport.find('.tlt')
-      .on('start.tlt', log('start.tlt triggered.'))
-      .on('inAnimationBegin.tlt', log('inAnimationBegin.tlt triggered.'))
-      .on('inAnimationEnd.tlt', log('inAnimationEnd.tlt triggered.'))
-      .on('outAnimationBegin.tlt', log('outAnimationBegin.tlt triggered.'))
-      .on('outAnimationEnd.tlt', log('outAnimationEnd.tlt triggered.'))
-      .on('end.tlt', log('end.tlt'));
-    
-    $form.on('change', function () {
-      var obj = getFormData();
-      $tlt.textillate(obj);
+      var $tlt = $viewport.find('.tlt')
+        .on('start.tlt', log('start.tlt triggered.'))
+        .on('inAnimationBegin.tlt', log('inAnimationBegin.tlt triggered.'))
+        .on('inAnimationEnd.tlt', log('inAnimationEnd.tlt triggered.'))
+        .on('outAnimationBegin.tlt', log('outAnimationBegin.tlt triggered.'))
+        .on('outAnimationEnd.tlt', log('outAnimationEnd.tlt triggered.'))
+        .on('end.tlt', log('end.tlt'));
+
+      $form.on('change', function() {
+        var obj = getFormData();
+        $tlt.textillate(obj);
+      });
+      $form.change();
+
     });
-    $form.change();
+  </script>
 
-  });
+</body>
 
-	</script>
-
-  </body>
 </html>
