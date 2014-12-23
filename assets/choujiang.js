@@ -6,7 +6,7 @@
  * @description
  *
  */
-var seed = 1224;
+var seed = 1223;
 
 /**
  * 抽取到第一个中奖的号码
@@ -37,4 +37,5 @@ function getLucker(sz, ss, totalPeople, count) {
         }
         return result;
     }
-    //var luchString = getLucker(3076.49, 10591.54, 20, 2);
+    //var luckerString = getLucker(3087.73, 10722.12, 1000000, 20);
+    //console.log(luckerString);
