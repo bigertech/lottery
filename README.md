@@ -1,8 +1,8 @@
 
 笔戈公开抽奖算法
 
-算法文件：
-`assets/choujiang.js`
+
+[算法文件](assets/choujiang.js)
 
 
 #### 中奖号码计算办法
