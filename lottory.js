@@ -27,15 +27,20 @@ function getLucker(sz, ss, totalPeople, count) {
   base = parseInt(base); // 取整
   var luckNum = (base % totalPeople) + 1;
   result.push(luckNum);
-  console.log(luckNum);
   var currentNum = luckNum;
   for (var i = 1; i < count; i++) {
-    var nextNum = (currentNum + seed * i) % totalPeople;
+    var nextNum = (currentNum + seed * i) % totalPeople;  // 下一个中奖用户
     currentNum = nextNum;
-    result.push(nextNum);
-    console.log(nextNum);
+    if(result.indexOf(nextNum) == -1){ // 如果不存在,则添加这个数
+      result.push(nextNum);
+      console.log(nextNum);
+      continue;
+    }
+    count++;
+
   }
   return result;
 }
 var luckerString = getLucker(3039.21, 10614.12, 1133261, 100);
+console.log(luckerString.length);
 //console.log(luckerString);
