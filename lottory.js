@@ -6,7 +6,6 @@
  * @description
  *
  */
-var seed = 1223;
 
 /**
  * 抽取到第一个中奖的号码
@@ -16,31 +15,30 @@ var seed = 1223;
  * @param count
  */
 function getLucker(sz, ss, totalPeople, count) {
-  var result = [];
-  if (count === 0) {
-    throw new Error('The param count should not be zereo!');
-  }
-  var base = sz * ss * 10000;
-
-  base = base.toString().split('').reverse().join(''); // 反转
-
-  base = parseInt(base); // 取整
-  var luckNum = (base % totalPeople) + 1;
-  result.push(luckNum);
-  var currentNum = luckNum;
-  for (var i = 1; i < count; i++) {
-    var nextNum = (currentNum + seed * i) % totalPeople;  // 下一个中奖用户
-    currentNum = nextNum;
-    if(result.indexOf(nextNum) == -1){ // 如果不存在,则添加这个数
-      result.push(nextNum);
-      console.log(nextNum);
-      continue;
+    var result = [];
+    if (count === 0) {
+      throw new Error('The param count should not be zereo!');
     }
-    count++;
+    seed = Math.floor(totalPeople / count);
+    console.log(seed);
+    var base = sz * ss * 10000;
 
+    base = base.toString().split('').reverse().join(''); // 反转
+
+    base = parseInt(base); // 取整
+    var luckNum = (base % totalPeople) + 1;
+    result.push(luckNum);
+    var currentNum = luckNum;
+    for (var i = 1; i < count; i++) {
+      var nextNum = (currentNum + seed * i) % totalPeople; // 下一个中奖用户
+      if (result.indexOf(nextNum) == -1) { // 如果不存在,则添加这个数
+        result.push(nextNum);
+        continue;
+      }
+      count++;
+
+    }
+    return result;
   }
-  return result;
-}
-var luckerString = getLucker(3039.21, 10614.12, 1133261, 100);
-console.log(luckerString.length);
-//console.log(luckerString);
+  //var luckerString = getLucker(3039.21, 10614.12, 1133261, 2);
+  //console.log(luckerString);
